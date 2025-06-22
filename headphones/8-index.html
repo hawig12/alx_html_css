@@ -1,17 +1,46 @@
-<header class="main-header">
-  <div class="container header-content">
-    <div class="logo">HEADPHONES</div>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="#">What we do</a></li>
-        <li><a href="#">Our results</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Headphones</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="icons/style.css" /> <!-- For icons -->
+</head>
+<body>
+  <!-- HEADER with Hamburger -->
+  <header class="main-header">
+    <div class="container header-content">
+      <div class="logo">HEADPHONES</div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#our-results">Our results</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dummy Sections -->
+  <section id="what-we-do" class="dummy-section">What we do...</section>
+  <section id="our-results" class="dummy-section">Our results...</section>
+  <section id="contact" class="dummy-section">Contact...</section>
+
+  <!-- JavaScript -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
